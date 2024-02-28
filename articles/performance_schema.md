@@ -3,12 +3,12 @@ title: "performance_schema を効果的な活用方法"
 emoji: "🗂"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [mysql]
-published: false
+published: true
 ---
-### performance_schemaとは
+## performance_schemaとは
 performance_schema は MySQL と Aurora MySQL の両方で使用可能な機能で、データベースの実行時のパフォーマンスやリソース消費に関する詳細な情報を収集します。(aws rdsなどだとPerformance Insightsで確認可能になっている)
 
-### Performance Insights で収集可能な情報
+## Performance Insights で収集可能な情報
 - 1. パフォーマンス監視
 待機イベントの分析: performance_schemaの待機イベントテーブルを使用して、データベースの待機時間を分析します。これにより、データベースがリソース（CPU、IO、ネットワーク等）を待機している時間とその原因を特定できます。
 
@@ -27,7 +27,7 @@ performance_schema は MySQL と Aurora MySQL の両方で使用可能な機能�
 
 デッドロックの特定: デッドロックの発生を検出し、その原因を特定するための情報を提供します。デッドロックのログを解析して、問題のあるトランザクションを特定します。
 
-### performance_schema を効果的に使用するための具体的なコマンドやクエリ例
+## performance_schema を効果的に使用するための具体的なコマンドやクエリ例
 - 1. performance_schemaの有効化
 MySQLでperformance_schemaが有効になっていることを確認します。デフォルトで有効になっていることが多いですが、無効になっている場合は、MySQLの設定ファイル（my.cnfまたはmy.ini）に以下の行を追加して有効化します。
 
